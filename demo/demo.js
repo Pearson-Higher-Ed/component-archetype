@@ -1,6 +1,8 @@
 'use strict';
 
-import MyComponent from '../main'; // for direct API usage
+import * as PearsonComponent from '../main'; // for direct API usage
+// would actually be:
+// import * as PearsonComponent from '@pearson-components/my-component';
 
 function init() {
 
@@ -13,7 +15,7 @@ function init() {
   }));
 
   // Demo direct API
-  new MyComponent({
+  new PearsonComponent.MyComponent({
     elementId: 'demo-target2',
     greeting: 'Bonjour le monde!',
     locale: 'fr-CA'

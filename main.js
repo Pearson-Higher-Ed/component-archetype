@@ -17,7 +17,7 @@ const translations = {
   'fr-CA' : frJson
 };
 
-export default class MyComponent {
+class MyComponent {
 
   constructor(config) {
 
@@ -43,3 +43,5 @@ export default class MyComponent {
 // For events, use the Origami naming convention of pre-pending with 'o.'
 //
 document.body.addEventListener('o.InitMyComponent', e => new MyComponent(e.detail));
+
+export {MyComponent}

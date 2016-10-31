@@ -5,6 +5,7 @@ node_js:
 - 6
 script:
 - npm run ci
+- ls -ltr
 - chmod 777 ./test/shell_scripts/run_tests.sh
 #- ./test/shell_scripts/run_tests.sh
 

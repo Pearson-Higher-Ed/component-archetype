@@ -15,7 +15,7 @@
     "ci": "node ./npm_scripts/ci.js",
     "release": "node ./npm_scripts/release.js",
     "verify": "node ./npm_scripts/verify.js",
-    "postinstall": "cp ./node_modules/@pearson-components/npm-scripts/npm_scripts/*.js ./npm_scripts"
+    "postinstall": "node ./npm_scripts/cross-platform.js"
   },
   "author": "",
   "license": "MIT",
@@ -45,11 +45,13 @@
     "expect": "~1.18.0",
     "expect-jsx": "~2.5.1",
     "file-loader": "~0.8.5",
+    "fs-extra": "^0.30.0",
     "ignore-styles": "~5.0.1",
     "intl": "~1.1.0",
     "jsdom": "~8.5.0",
     "json-loader": "~0.5.4",
     "mocha": "~2.4.5",
+    "node-fs-extra": "^0.8.1",
     "node-sass": "~3.7.0",
     "pearson-elements": "^0.12.0",
     "react": "^15.0.0",

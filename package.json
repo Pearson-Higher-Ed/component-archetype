@@ -6,6 +6,7 @@
   "scripts": {
     "dev-setup": "node ./npm_scripts/dev-setup.js",
     "dev": "node ./npm_scripts/dev.js",
+    "start": "npm run dev",
     "pretest": "node ./npm_scripts/pretest.js",
     "test": "node ./npm_scripts/test.js",
     "build": "node ./npm_scripts/build.js",
@@ -27,7 +28,7 @@
     "react-intl": "~2.0.1"
   },
   "devDependencies": {
-    "@pearson-components/npm-scripts": "^0.3.6",
+    "@pearson-components/npm-scripts": "^0.3.7",
     "babel-core": "~6.3.17",
     "babel-eslint": "~4.1.6",
     "babel-loader": "~6.2.0",

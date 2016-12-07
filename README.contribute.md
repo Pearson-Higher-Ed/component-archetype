@@ -100,7 +100,7 @@ Linting will run automatically prior to executing the test suite.
 
     npm test    
 
-### Automated Test
+### Functional Test
 
 When ready, turn on Selenium-based automated testing for QA, by **un-commenting** `./test/shell_scripts/run_tests.sh`
 in the CI configuration (.travis.yml or solano.yml).

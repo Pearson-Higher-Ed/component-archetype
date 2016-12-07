@@ -43,9 +43,6 @@ If it is decided the repo belongs in **Pearson Bitbucket**, send a request to th
 
     git push -u origin master
 
-5. Turn off Selenium testing until ready for QA to begin that effort, by commenting out `./test/shell_scripts/run_tests.sh`
-in .travis.yml.
-
 ## Ready to Develop
 
 After completing the above steps, delete this README and rename [README.main.md](README.main.md) as "README.md" for

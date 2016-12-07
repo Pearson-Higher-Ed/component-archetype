@@ -85,7 +85,7 @@ Build the bundle(s) manually at any time, and minify all JavaScript for producti
 
     npm run build
 
-### Test
+### Unit Test
 
 The project is wired to unit test with the popular [Mocha](https://mochajs.org/) framework and the [expect](https://github.com/mjackson/expect) assertion library.
 
@@ -99,6 +99,11 @@ Linting will run automatically prior to executing the test suite.
 
 
     npm test    
+
+### Functional Test
+
+When ready, turn on Selenium-based automated testing for QA, by **un-commenting** `./test/shell_scripts/run_tests.sh`
+in the CI configuration (.travis.yml or solano.yml).
 
 ### Spec Compliance
 

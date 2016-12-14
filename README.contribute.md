@@ -56,6 +56,7 @@ See the project working before changing anything!
 In your local repo:
 
     npm install
+    npm run copy-utils
     npm run dev
 
 Navigate to: **localhost:8081/demo** 

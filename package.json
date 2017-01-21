@@ -5,9 +5,9 @@
   "main": "./build/dist.component-name.js",
   "scripts": {
     "dev-setup": "node ./npm_scripts/dev-setup.js",
-    "dev": "node ./npm_scripts/dev.js",
+    "dev": "npm run copy-utils && node ./npm_scripts/dev.js",
     "start": "npm run dev",
-    "pretest": "node ./npm_scripts/pretest.js",
+    "pretest": "npm run copy-utils && node ./npm_scripts/pretest.js",
     "test": "node ./npm_scripts/test.js",
     "build": "node ./npm_scripts/build.js",
     "lint": "node ./npm_scripts/lint.js",

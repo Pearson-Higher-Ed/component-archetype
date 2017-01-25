@@ -5,7 +5,9 @@ import expectJSX from 'expect-jsx';
 import React from 'react';
 import {IntlProvider} from 'react-intl';
 import TestUtils from 'react-addons-test-utils';
-import ComponentOwner from '../src/js/component-owner';
+import { shallow } from 'enzyme';
+import ComponentOwner from '../../src/js/component-owner';
+import propagateToGlobal from '../utils/dom';
 
 expect.extend(expectJSX);
 

@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 node_modules
+coverage
 fonts
 demo/elements.css
 npm-debug.log
@@ -8,3 +9,4 @@ npm-debug.log
 build/dev*
 build/dist*
 npm_scripts/*.js
+yarn.lock

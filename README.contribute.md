@@ -10,10 +10,11 @@ The use of Bower for dependencies is not sanctioned in Origami v2. Use npm with 
 | [React Intl](https://github.com/yahoo/react-intl/wiki) | API to handle translations, format dates, numbers, and strings. | |
 | [Babel](http://babeljs.io) |  Compiles ES6 to ES5 to enjoy the new version of JavaScript today. Also transpiles JSX via babel-preset-react. | [ES6 REPL](https://babeljs.io/repl/), [ES6 vs ES5](http://es6-features.org), [ES6 Katas](http://es6katas.org), [Pluralsight course](https://www.pluralsight.com/courses/javascript-fundamentals-es6)    |
 | [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes source maps and hot reloading via [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
-| [Mocha](http://mochajs.org) | Automated tests with [expect](https://www.npmjs.com/package/expect) for assertions and [React Test Utils](https://facebook.github.io/react/docs/test-utils.html) for DOM testing without a browser. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
+| [Jest](https://facebook.github.io/jest/) | Automated tests with [expect](https://www.npmjs.com/package/expect) for assertions and [React Test Utils](https://facebook.github.io/react/docs/test-utils.html) and [Enzyme](http://airbnb.io/enzyme/) for DOM testing without a browser. | [Pluralsight Course](https://www.pluralsight.com/courses/jest-mastering-react-testing) |
 | [ESLint](http://eslint.org/)| Lint JavaScript as configured in .eslintrc. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
 | [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) | Compiled CSS styles with variables, mixins, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
-| [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
+|[Enzyme](http://airbnb.io/enzyme/)|Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.|[Jest & Enzyme](https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8)|
+| [Npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
 
 This archetype includes a working example component that puts the above to use.
 
@@ -24,9 +25,9 @@ Inform the consumers of this component in [README.usage.md](README.usage.md) of 
 
 ## Continuous Integration
 
-To hook up your project to Origami continuous integration, a one-time manual process is currently required. 
+To hook up your project to Origami continuous integration, a one-time manual process is currently required.
 
-Please send your request for one of the following GitHub or BitBucket options to: pearson-design-accelerator@pearson.com 
+Please send your request for one of the following GitHub or BitBucket options to: pearson-design-accelerator@pearson.com
 or [HipChat](https://pearson.hipchat.com/chat/room/1469228)
 
 ### GitHub
@@ -40,7 +41,7 @@ BitBucket repositories will integrate with [Solano CI](https://ci.solanolabs.com
 scope in Pearson's npm organization.
 
 ## Initial Machine Setup
-1. Install [Git](https://git-scm.com/downloads). 
+1. Install [Git](https://git-scm.com/downloads).
 2. Install [Node 4.0.0 or greater](https://nodejs.org) - Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
 3. On a Mac? You're all set. If you're on Windows, complete the steps for your OS below.  
 
@@ -59,25 +60,25 @@ In your local repo:
     npm run copy-utils
     npm run dev
 
-Navigate to: **localhost:8081/demo** 
+Navigate to: **localhost:8081/demo**
 
 #### Where are the files being served from?
 
-Webpack serves your component in memory when you `npm run dev`. No physical files are written. When the component is 
+Webpack serves your component in memory when you `npm run dev`. No physical files are written. When the component is
 built using `npm run build`, physical files are written to /build.
 
-Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically 
+Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically
 reloaded in the browser. Changes to the demo/index.html itself, however, do require a manual page refresh.
 
 ### Using ElementsSDK
 
-Pearson has created a base styling library to assist developers in creating a user interface with styles 
-that are pre-approved by the design team.  For the purposes of this component archetype the incorporation of 
-ElementsSDK is for the purposes of the demo only, but it is possible that the component archetype demo does 
-not pull in the latest version of ElementsSDK.  Should the demo need to be on the latest ElementsSDK 
+Pearson has created a base styling library to assist developers in creating a user interface with styles
+that are pre-approved by the design team.  For the purposes of this component archetype the incorporation of
+ElementsSDK is for the purposes of the demo only, but it is possible that the component archetype demo does
+not pull in the latest version of ElementsSDK.  Should the demo need to be on the latest ElementsSDK
 version, please update the package.json file to reflect the current version of [ElementsSDK](https://github.com/Pearson-Higher-Ed/elements)
 
-Additionally, given the scope of ElementsSDK, developers will need to consider if incorporating ElementsSDK 
+Additionally, given the scope of ElementsSDK, developers will need to consider if incorporating ElementsSDK
 into their component as a direct dependency is warranted.  
 
 ### Build
@@ -88,13 +89,23 @@ Build the bundle(s) manually at any time, and minify all JavaScript for producti
 
 ### Unit Test
 
-The project is wired to unit test with the popular [Mocha](https://mochajs.org/) framework and the [expect](https://github.com/mjackson/expect) assertion library.
+The project is wired to unit test with the popular [Jest](https://facebook.github.io/jest/) framework and the [expect](https://github.com/mjackson/expect) assertion library.
 
 It is also enabled for the following options:
 
 - [shallow rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) with React's test utilities
 
 - Rendering a component into a detached DOM node in the document, using [jsdom](http://jaketrent.com/post/testing-react-with-jsdom/)
+
+- Airbnb's Enzyme for DOM manipulation and traversal. [Enzyme](http://airbnb.io/enzyme/)
+
+Code coverage report generated by Jest when the tests are run.  The report can be viewed when you run:
+
+    npm test
+
+    npm start
+
+    go to ---> http://localhost:8081/coverage/lcov-report/
 
 Linting will run automatically prior to executing the test suite.
 
@@ -114,10 +125,10 @@ Determine if your component passes a series of checks for Origami v2 compliance.
 
 ### Translations for Internationalization
 
-It is expected that applications will pass in translated text for dynamic content, and your component simply needs to 
+It is expected that applications will pass in translated text for dynamic content, and your component simply needs to
 render whatever is passed in.
 
-**For text inherent to the component** (e.g. button text or input placeholder), add JSON translations for each supported 
+**For text inherent to the component** (e.g. button text or input placeholder), add JSON translations for each supported
 locale to the translations folder, and use the `locale` configuration parameter.
 
 ### Publish to Pearson npm Registry
@@ -126,22 +137,22 @@ FOR PUBLIC PACKAGES ONLY, add the following npm script to the package.json:
 
     "postpublish": "npm access public && echo 'Package scope set to public!'"
 
-**Do not manually version or tag your project**. Instead, when you are ready to publish an update to npm, manually run 
-the release script in the master branch. It handles all of that and publishes to npm on your behalf using the 
+**Do not manually version or tag your project**. Instead, when you are ready to publish an update to npm, manually run
+the release script in the master branch. It handles all of that and publishes to npm on your behalf using the
 pearson-ux account.
 
-Additionally, there is no need to manually maintain a change log - if you follow the 
-[commitizen](https://commitizen.github.io/cz-cli/) conventions for commit messages, a change log will automatically be 
+Additionally, there is no need to manually maintain a change log - if you follow the
+[commitizen](https://commitizen.github.io/cz-cli/) conventions for commit messages, a change log will automatically be
 generated during the release process.
 
-Before you run the release script, ensure that you don't have to manually authenticate every time you perform a network 
+Before you run the release script, ensure that you don't have to manually authenticate every time you perform a network
 operation with Git.
 
     npm run release
 
 ### How do I debug?
 
-Source maps are enabled for the webpack dev server. Using Chrome's dev tools - open the "Sources" tab, navigate to 
+Source maps are enabled for the webpack dev server. Using Chrome's dev tools - open the "Sources" tab, navigate to
 `top/webpack://./`, and you will find the original source files for which you can set breakpoints in Chrome's debugger.
 
 **To take advantage of source maps, you must enable JavaScript source maps in your browser**.

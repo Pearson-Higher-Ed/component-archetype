@@ -89,6 +89,5 @@
     "webpack-dev-server": "~1.14.0"
   },
   "keywords": [
-    "pearson-components"
   ]
 }

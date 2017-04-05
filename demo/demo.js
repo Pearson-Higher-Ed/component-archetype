@@ -1,25 +1,50 @@
-import MyComponent from '../main'; // to demo direct API usage
+import React            from 'react';
+import ReactDOM         from 'react-dom';
+import IntlInjection    from './IntlInjection';
+import { IntlProvider } from 'react-intl'
 
-// When available on npm, consumer usage would be similar to:
-// import MyComponent from '@pearson-components/[component-name]'
+class ComponentWrapper {
+
+  constructor(config) {
+    this.init(config)
+  }
+
+  init(config) {
+
+    const locale = config.locale ? config.locale : 'en'
+
+    ReactDOM.render(
+      <IntlProvider locale={locale}>
+        <IntlInjection data={config} />
+      </IntlProvider>,
+      document.getElementById(config.elementId)
+    )
+  }
+
+}
+
 
 function init() {
 
   // Demo eventing API
-  document.body.dispatchEvent(new CustomEvent('o.InitMyComponent', {
+  document.body.dispatchEvent(new CustomEvent('o.InitComponent', {
     detail: {
-      elementId: 'demo-target1',
-      greeting: 'Hello world!'
+      elementId            : 'app',
+      contentTemplateLarge : true,
+      footerVisible        : true,
+      successBtnCallback   : function () { console.log('¡¡success button pressed!!') }
     }
   }));
 
   // Demo direct API
-  new MyComponent({
-    elementId: 'demo-target2',
-    greeting: 'Bonjour le monde!',
-    locale: 'fr'
+  new ComponentWrapper({
+    elementId            : 'app',
+    contentTemplateLarge : true,
+    footerVisible        : true,
+    successBtnCallback   : function () { console.log('¡¡success button pressed!!') }
   });
 
 }
+
 
 window.onload = init;

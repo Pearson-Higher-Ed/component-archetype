@@ -1,28 +1,10 @@
-// In React, an owner is the component that sets the props of other components, if desired.
-// (see https://facebook.github.io/react/docs/multiple-components.html)
-//
-// NOTE: If you want to reference another Origami component in this file's JSX below, import
-// its src/js/component-owner.js directly from this project's /node_modules.
-
 import '../scss/component-specific.scss';
 
-import React, {PropTypes} from 'react';
-import {intlShape, injectIntl} from 'react-intl';
-import {messages} from './defaultMessages';
+import React, { Component } from 'react';
+import { messages }         from './../../translations/defaultMessages';
 
-class ComponentOwner extends React.Component {
 
-  //
-  // Modify or add prop types to validate the properties passed to this component!
-  // This is defined using an ES7 class property (transpiled by Babel Stage 0)
-  //
-  static propTypes = {
-    intl: intlShape.isRequired,
-    data: PropTypes.shape({
-      elementId: PropTypes.string.isRequired,
-      locale: PropTypes.string
-    })
-  };
+class ComponentOwner extends Component {
 
   constructor(props) {
 
@@ -54,7 +36,7 @@ class ComponentOwner extends React.Component {
     //
     return (
       <div className="pe-inlineblock">
-        <button className="pe-btn pe-btn--primary" onClick={this._change}>{formatMessage(messages.buttonText)}</button>
+        <button className="pe-btn--primary" onClick={this._change}>{formatMessage(messages.buttonText)}</button>
         &nbsp;
         <span className="pe-input">
           <input type="text" placeholder={formatMessage(messages.placeholder)} value={this.state.text} />
@@ -65,4 +47,5 @@ class ComponentOwner extends React.Component {
 
 }
 
-export default injectIntl(ComponentOwner); // Inject this.props.intl into the component context
+
+export default ComponentOwner;

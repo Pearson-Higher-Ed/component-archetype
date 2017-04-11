@@ -19,14 +19,14 @@ module.exports = {
   output: {
     path          : path.resolve(__dirname, 'build'),
     filename      : '[name].component-name.js',
-    publicPath    : '/component',
+    publicPath    : '/component-archetype',
     libraryTarget : 'umd'
   },
   devtool: "source-map",
   devServer: {
     host               : "0.0.0.0",
     port               : 8081,
-    publicPath         : "/component",
+    publicPath         : "/component-archetype",
     hot                : true,
     https              : false,
     overlay            : true,

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+    <title>Demo Component</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -14,16 +14,14 @@
     <br />
     <div id="demo-target2"></div>
 
+    <!-- Provide React and ReactDOM as a depedency external to the component -->
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/prop-types/prop-types.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
     <!-- CustomEvent polyfill is for IE, Intl.js polyfill is for Safari -->
     <script src="https://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent,Intl.~locale.en,Intl.~locale.fr"></script>
-    <!-- Locally hosted demo server -->
-    <!-- <script src="http://localhost:8081/webpack-dev-server.js"></script> -->
     <!-- Demo build of component -->
     <!-- Build Component to View Demo: npm run build && npm start -->
-    <!-- View At: https://localhost:8081/component/ -->
-    <script src="/component/vendor.component-name.js"></script>
-    <script src="/component/dev.component-name.js"></script>
-    <script src="/component/dist.component-name.js"></script>
-    <script src="/component/manifest.component-name.js"></script>
-<script type="text/javascript" src="/component/manifest.component-name.js"></script><script type="text/javascript" src="/component/vendor.component-name.js"></script><script type="text/javascript" src="/component/dev.component-name.js"></script><script type="text/javascript" src="/component/demo.component-name.js"></script><script type="text/javascript" src="/component/dist.component-name.js"></script></body>
+    <!-- View At: http://localhost:8081/component/ -->
+<script type="text/javascript" src="/component/demo.component-name.js"></script><script type="text/javascript" src="/component/dev.component-name.js"></script><script type="text/javascript" src="/component/dist.component-name.js"></script></body>
 </html>

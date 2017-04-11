@@ -7,9 +7,9 @@ npm-debug.log
 yarn.lock
 
 /node_modules
-/coverage
 
 #====-Build Section-=========
 # comment out for gh_pages...
 /build
+/coverage
 #============================

@@ -17,6 +17,7 @@ const translations = {
   'en-US' : enUSJson
 };
 
+
 // Add Language
 addLocaleData(frLocaleData);
 addLocaleData(enUSLocaleData);

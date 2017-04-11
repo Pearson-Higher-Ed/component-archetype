@@ -68,10 +68,17 @@ module.exports = {
           loader: 'babel-loader',
         },
         {
-          test: /\.(png|jpg|gif|svg|ttf|woff|woff2)$/,
+          test: /\.(png|jpg|gif|svg)$/,
           loader: 'file-loader',
           options: {
-              name: '[name].[ext]?[hash]'
+              name: '/images/[name].[ext]?[hash]'
+          }
+        },
+        {
+          test: /\.(ttf|woff|woff2)$/,
+          loader: 'file-loader',
+          options: {
+              name: '/fonts/[name].[ext]?[hash]'
           }
         }
       ]

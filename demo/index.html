@@ -12,6 +12,22 @@
     <br />
     <div id="app"></div>
 
+    <!-- Icons -->
+    <script>
+      if (document.body.children[0].nodeName != 'svg') {
+        var pe_ajax = new XMLHttpRequest();
+        pe_ajax.open("GET", "/component/images/p-icons-sprite-1.1.svg", true);
+        pe_ajax.responseType = "document";
+        pe_ajax.onload = function(e) {
+          document.body.insertBefore(
+            pe_ajax.responseXML.documentElement,
+            document.body.childNodes[0]
+          );
+        }
+        pe_ajax.send();
+      }
+    </script>
+
     <!-- Provide React and ReactDOM as a depedency external to the component -->
     <script src="https://unpkg.com/react@15/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>

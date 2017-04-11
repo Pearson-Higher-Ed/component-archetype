@@ -1,50 +1,32 @@
-import React            from 'react';
-import ReactDOM         from 'react-dom';
-import IntlInjection    from './IntlInjection';
-import { IntlProvider } from 'react-intl'
+import React         from 'react';
+import ReactDOM      from 'react-dom';
+import IntlInjection from './IntlInjection';
 
-class ComponentWrapper {
+import { addLocaleData, IntlProvider } from 'react-intl';
 
-  constructor(config) {
-    this.init(config)
-  }
+// Import Translations...
+import frJson       from './translations/fr.json';
+import frLocaleData from 'react-intl/locale-data/fr';
 
-  init(config) {
+import enUSJson       from './translations/en-US.json';
+import enUSLocaleData from 'react-intl/locale-data/en';
 
-    const locale = config.locale ? config.locale : 'en'
+// Associate Language Abbreviation with json filename...
+const translations = {
+  'fr'    : frJson,
+  'en-US' : enUSJson
+};
 
-    ReactDOM.render(
-      <IntlProvider locale={locale}>
-        <IntlInjection data={config} />
-      </IntlProvider>,
-      document.getElementById(config.elementId)
-    )
-  }
+// Add Language
+addLocaleData(frLocaleData);
+addLocaleData(enUSLocaleData);
 
-}
+// Determining the User's Locale
+const locale = (navigator.language) ? navigator.language : navigator.browserLanguage;
 
-
-function init() {
-
-  // Demo eventing API
-  document.body.dispatchEvent(new CustomEvent('o.InitComponent', {
-    detail: {
-      elementId            : 'app',
-      contentTemplateLarge : true,
-      footerVisible        : true,
-      successBtnCallback   : function () { console.log('¡¡success button pressed!!') }
-    }
-  }));
-
-  // Demo direct API
-  new ComponentWrapper({
-    elementId            : 'app',
-    contentTemplateLarge : true,
-    footerVisible        : true,
-    successBtnCallback   : function () { console.log('¡¡success button pressed!!') }
-  });
-
-}
-
-
-window.onload = init;
+ReactDOM.render(
+  <IntlProvider locale={locale || 'en'} key={locale} messages={translations[locale]}>
+    <IntlInjection />
+  </IntlProvider>,
+  document.getElementById('app')
+)

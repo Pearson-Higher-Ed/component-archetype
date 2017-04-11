@@ -1,12 +1,15 @@
 .DS_Store
 .idea
-node_modules
-coverage
-fonts
-demo/elements.css
-npm-debug.log
 *.iml
-build/dev*
-build/dist*
-npm_scripts/*.js
+*.swo
+*.swp
+npm-debug.log
 yarn.lock
+
+/node_modules
+/coverage
+
+#====-Build Section-=========
+# comment out for gh_pages...
+/build
+#============================

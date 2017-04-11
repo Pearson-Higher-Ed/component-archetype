@@ -1,12 +1,11 @@
 /* global describe it expect */
 
-import expect           from 'expect';
-import expectJSX        from 'expect-jsx';
-import React            from 'react';
-import TestUtils        from 'react-addons-test-utils';
-import ComponentOwner   from '../src/js/component-owner';
-import { IntlProvider } from 'react-intl';
-import { shallow }      from 'enzyme';
+import expect             from 'expect';
+import expectJSX          from 'expect-jsx';
+import React              from 'react';
+import TestUtils          from 'react-addons-test-utils';
+import { ComponentOwner } from '../index';
+import { shallow }        from 'enzyme';
 
 expect.extend(expectJSX);
 

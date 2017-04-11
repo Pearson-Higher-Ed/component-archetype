@@ -1,7 +1,4 @@
-import '../scss/component-specific.scss';
-
 import React, { Component } from 'react';
-import { messages }         from './../../translations/defaultMessages';
 
 
 class ComponentOwner extends Component {
@@ -25,22 +22,19 @@ class ComponentOwner extends Component {
   //
   // FOR DEMO and should be removed:
   _change = () => {
-    this.setState({text: this.props.data.greeting});
+    this.setState({text: this.props.data.text.greeting});
   };
 
   render() {
-
-    const {formatMessage} = this.props.intl;
+    const { data } = this.props;
     //
     // FOR DEMO and should be refactored for your purposes:
     //
     return (
       <div className="pe-inlineblock">
-        <button className="pe-btn--primary" onClick={this._change}>{formatMessage(messages.buttonText)}</button>
+        <button className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
         &nbsp;
-        <span className="pe-input">
-          <input type="text" placeholder={formatMessage(messages.placeholder)} value={this.state.text} />
-        </span>
+        <input type="text" placeholder={data.text.placeholder} value={this.state.text} />
       </div>
     )
   }

@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom';
 import React    from 'react';
 
-import { default as Component } from '../index.js';
+import { default as Component } from '../index';
 
-class ComponentWrapper {
-  constructor(config) {
-    ReactDOM.render( <Component data={config.props} />, document.getElementById(config.elementId) );
-  }
-}
 
-document.body.addEventListener('o.InitComponent', e => new ComponentWrapper(e.detail));
+document.body.addEventListener('o.InitComponent', e => {
+  ReactDOM.render(
+    React.createElement(Component, e.detail.props, e.detail.props.children)
+    , document.getElementById(e.detail.elementId)
+  );
+});

@@ -6,7 +6,6 @@ class ComponentOwner extends Component {
   constructor(props) {
 
     super(props);
-
     //
     // FOR DEMO - use state when you need to respond to user input, a server request or the passage of time
     //

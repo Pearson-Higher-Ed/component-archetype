@@ -30,7 +30,7 @@ class ComponentOwner extends Component {
     // FOR DEMO and should be refactored for your purposes:
     //
     return (
-      <div className="pe-inlineblock">
+      <div className="hi">
         <button className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
         &nbsp;
         <input type="text" placeholder={data.text.placeholder} value={this.state.text} />

@@ -38,8 +38,8 @@ GitHub repositories will integrate with [Travis CI](https://travis-ci.org/Pearso
 ### GitHub Pages
 The component demo can be deployed to github pages by:
 
-  npm run build
-  npm run deploy
+    npm run build
+    npm run deploy
 
 The page can then be viewed at:
 
@@ -68,8 +68,7 @@ See the project working before changing anything!
 In your local repo:
 
     npm install
-    npm run copy-utils
-    npm run dev
+    npm start
 
 Navigate to: **localhost:8081/demo**
 

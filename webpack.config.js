@@ -13,20 +13,21 @@ const elements          = `${__dirname}/node_modules/pearson-elements/dist/css/e
 module.exports = {
   entry: {
     demo   : [ demo, demoScss ],
-    dev    : [ elements, main ],
+    dev    : [ elements, icons, main ],
     dist   : [ component ]
   },
   output: {
     path          : path.resolve(__dirname, 'build'),
     filename      : '[name].component-name.js',
-    publicPath    : '/component-archetype',
+    publicPath    : '/component-archetype/',
     libraryTarget : 'umd'
   },
   devtool: "source-map",
   devServer: {
+    // contentBase: path.join(__dirname, "build"),
     host               : "0.0.0.0",
     port               : 8081,
-    publicPath         : "/component-archetype",
+    publicPath         : "/component-archetype/",
     hot                : true,
     https              : false,
     overlay            : true,

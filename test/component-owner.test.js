@@ -22,8 +22,6 @@ describe('Component Owner Suite',() => {
 
   it('renders the correct text when the button is clicked', function () {
     this.wrapper.find('button').simulate('click');
-    console.log(this.wrapper.find('input').node.value)
-
   });
 
 });

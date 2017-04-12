@@ -70,11 +70,11 @@ In your local repo:
     npm install
     npm start
 
-Navigate to: **localhost:8081/demo**
+Navigate to: **localhost:8081/component-archetype/**
 
 #### Where are the files being served from?
 
-Webpack serves your component in memory when you `npm run dev`. No physical files are written. When the component is
+Webpack serves your component in memory when you `npm start`. No physical files are written. When the component is
 built using `npm run build`, physical files are written to /build.
 
 Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically

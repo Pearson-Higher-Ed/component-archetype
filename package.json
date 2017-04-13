@@ -4,7 +4,7 @@
   "description": "",
   "author": "",
   "license": "MIT",
-  "homepage": "http://pearson-higher-ed.github.io/component-archetype/",
+  "homepage": "https://pearson-higher-ed.github.io/component-archetype/",
   "main": "./build/dist.component-name.js",
   "scripts": {
     "start": "npm run serve",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pearson-Higher-Ed/componen-archetypet"
+    "url": "https://github.com/Pearson-Higher-Ed/component-archetype/"
   },
   "jest": {
     "moduleFileExtensions": [

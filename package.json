@@ -37,7 +37,7 @@
       }
     },
     "testPathIgnorePatterns": [
-      "<rootDir>/(build|node_modules|demo|coverage|npm_scripts)/"
+      "<rootDir>/(build|node_modules|demo|coverage)/"
     ],
     "testEnvironment": "node",
     "verbose": true

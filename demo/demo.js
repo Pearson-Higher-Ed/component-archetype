@@ -1,25 +1,32 @@
-import MyComponent from '../main'; // to demo direct API usage
+import React         from 'react';
+import ReactDOM      from 'react-dom';
+import IntlInjection from './IntlInjection';
 
-// When available on npm, consumer usage would be similar to:
-// import MyComponent from '@pearson-components/[component-name]'
+import { addLocaleData, IntlProvider } from 'react-intl';
 
-function init() {
+// Import Translations...
+import frJson       from './translations/fr.json';
+import frLocaleData from 'react-intl/locale-data/fr';
 
-  // Demo eventing API
-  document.body.dispatchEvent(new CustomEvent('o.InitMyComponent', {
-    detail: {
-      elementId: 'demo-target1',
-      greeting: 'Hello world!'
-    }
-  }));
+import enUSJson       from './translations/en-US.json';
+import enUSLocaleData from 'react-intl/locale-data/en';
 
-  // Demo direct API
-  new MyComponent({
-    elementId: 'demo-target2',
-    greeting: 'Bonjour le monde!',
-    locale: 'fr'
-  });
+// Associate Language Abbreviation with json filename...
+const translations = {
+  'fr'    : frJson,
+  'en-US' : enUSJson
+};
 
-}
+// Add Language
+addLocaleData(frLocaleData);
+addLocaleData(enUSLocaleData);
 
-window.onload = init;
+// Determining the User's Locale
+const locale = (navigator.language) ? navigator.language : navigator.browserLanguage;
+
+ReactDOM.render(
+  <IntlProvider locale={locale || 'en'} key={locale} messages={translations[locale]}>
+    <IntlInjection />
+  </IntlProvider>,
+  document.getElementById('app')
+)

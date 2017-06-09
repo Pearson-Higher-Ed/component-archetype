@@ -12,9 +12,10 @@ const elements          = `${__dirname}/node_modules/pearson-elements/dist/css/e
 
 module.exports = {
   entry: {
-    demo   : [ demo, demoScss ],
-    dev    : [ elements, icons, main ],
-    dist   : [ component ]
+    demo             : [ demo, demoScss ],
+    dev              : [ elements, icons, main ],
+    eventInstatiator : [ main ],
+    dist             : [ component ]
   },
   output: {
     path          : path.resolve(__dirname, 'build'),

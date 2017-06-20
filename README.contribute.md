@@ -13,7 +13,7 @@ The use of Bower for dependencies is not sanctioned in Origami v2. Use npm with 
 | [Jest](https://facebook.github.io/jest/) | Automated tests with [expect](https://www.npmjs.com/package/expect) for assertions and [React Test Utils](https://facebook.github.io/react/docs/test-utils.html) and [Enzyme](http://airbnb.io/enzyme/) for DOM testing without a browser. | [Pluralsight Course](https://www.pluralsight.com/courses/jest-mastering-react-testing) |
 | [ESLint](http://eslint.org/)| Lint JavaScript as configured in .eslintrc. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
 | [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) | Compiled CSS styles with variables, mixins, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
-|[Enzyme](http://airbnb.io/enzyme/)|Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.|[Jest & Enzyme](https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8)|
+| [Enzyme](http://airbnb.io/enzyme/)|Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse your React component's output.|[Jest & Enzyme](https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8)|
 | [Npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
 
 This archetype includes a working example component that puts the above to use.
@@ -91,12 +91,6 @@ version, please update the package.json file to reflect the current version of [
 Additionally, given the scope of ElementsSDK, developers will need to consider if incorporating ElementsSDK
 into their component as a direct dependency is warranted.
 
-### Build
-
-Build the bundle(s) manually at any time, and minify all JavaScript for production:
-
-    npm run build
-
 ### Unit Test
 
 The project is wired to unit test with the popular [Jest](https://facebook.github.io/jest/) framework and the [expect](https://github.com/mjackson/expect) assertion library.
@@ -123,11 +117,7 @@ if you've deployed your project to github pages as detailed above:
 
 Linting will run automatically prior to executing the test suite.
 
-
     npm test
-
-
-
 
 ### Functional Test
 
@@ -145,8 +135,8 @@ Determine if your component passes a series of checks for Origami v2 compliance.
 It is expected that applications will pass in translated text for dynamic content, and your component simply needs to
 render whatever is passed in.
 
-**For text inherent to the component** (e.g. button text or input placeholder), add JSON translations for each supported
-locale to the translations folder, and use the `locale` configuration parameter.
+**For text inherent to the component** (e.g. button text, input placeholder), add JSON translations for each supported
+locale to a translations folder (as shown in /demo), and use the browser's locale parameter.
 
 ### Publish to Pearson npm Registry
 

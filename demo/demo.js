@@ -30,3 +30,11 @@ ReactDOM.render(
   </IntlProvider>,
   document.getElementById('app')
 )
+
+// Force locale to French for the purpose of simplifying the demo
+ReactDOM.render(
+  <IntlProvider locale={'fr'} key={'fr'} messages={translations['fr']}>
+    <IntlInjection />
+  </IntlProvider>,
+  document.getElementById('translationDemo')
+)

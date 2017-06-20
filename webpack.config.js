@@ -1,3 +1,4 @@
+const fs                = require('fs');
 const path              = require('path');
 const webpack           = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,14 +9,18 @@ const main              = `${__dirname}/demo/main.js`;
 const component         = `${__dirname}/index.js`;
 const icons             = `${__dirname}/node_modules/pearson-elements/dist/icons/p-icons-sprite-1.1.svg`;
 const elements          = `${__dirname}/node_modules/pearson-elements/dist/css/elements.css`;
+const fontsDir          = `${__dirname}/node_modules/pearson-elements/dist/fonts/`;
+const fonts             = fs.readdirSync(fontsDir, 'utf-8');
+const fontsList         = fonts.map(font => fontsDir + font);
 
 
 module.exports = {
   entry: {
     demo             : [ demo, demoScss ],
-    dev              : [ elements, icons, main ],
+    dev              : [ elements, icons ],
     eventInstatiator : [ main ],
-    dist             : [ component ]
+    dist             : [ component ],
+    fonts            : fontsList
   },
   output: {
     path          : path.resolve(__dirname, 'build'),
@@ -67,7 +72,7 @@ module.exports = {
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         },
         {
           test: /\.(png|jpg|gif|svg)$/,

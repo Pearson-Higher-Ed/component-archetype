@@ -86,6 +86,10 @@ module.exports = {
           options: {
               name: '/fonts/[name].[ext]?[hash]'
           }
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader'
         }
       ]
   },

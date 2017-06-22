@@ -11,6 +11,6 @@ yarn.lock
 
 #====-Build Section-=========
 # comment out for gh_pages...
-# or run: npm run deploy
+# or run: npm run gh-pages
 /build
 #============================

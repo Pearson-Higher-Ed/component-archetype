@@ -1,7 +1,7 @@
 import React              from 'react';
 import { injectIntl }     from 'react-intl';
 import { messages }       from './translations/defaultMessages';
-import { ComponentOwner } from '../index';
+import { ComponentOwner as MyComponent} from '../index';
 
 
 const IntlInjection = (props) => {
@@ -19,7 +19,7 @@ const IntlInjection = (props) => {
       let data  = {};
       data.text = intlText;
 
-      return <ComponentOwner data={data} />
+      return <MyComponent data={data} />
 }
 
 

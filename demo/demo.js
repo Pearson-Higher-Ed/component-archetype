@@ -11,6 +11,8 @@ import enUSLocaleData from 'react-intl/locale-data/en';
 //
 // Example of consuming the component using React-Intl translation.
 //
+// Demo by adding the query string to the URL: "?lang=fr"
+//
 
 let   language = 'en-US';
 const search = window.location.search,

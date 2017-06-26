@@ -1,5 +1,6 @@
 {
   "buttonText": "dis bonjour",
   "placeholder": "espace réservé",
-  "greeting": "Salut!"
+  "greeting": "Salut!",
+  "label": "Salutation "
 }

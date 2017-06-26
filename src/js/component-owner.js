@@ -31,9 +31,10 @@ class ComponentOwner extends Component {
     //
     return (
       <div>
-        <button className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
-        &nbsp;
-        <input type="text" placeholder={data.text.placeholder} value={this.state.text} />
+         <button type="button" className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
+         <br /><br />
+         <label htmlFor="uniqueID">{data.text.label}</label>
+         <input type="text" id="uniqueID" placeholder={data.text.placeholder} value={this.state.text} />
       </div>
     )
   }

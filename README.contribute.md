@@ -122,7 +122,6 @@ Determine if your component passes a series of checks for Origami v2 compliance.
 ### GitHub Pages
 The component demo can be deployed to GitHub Pages by:
 
-    npm run build
     npm run gh-pages
 
 The page can then be viewed at:

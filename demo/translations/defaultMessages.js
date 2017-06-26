@@ -18,5 +18,10 @@ export const messages = defineMessages({
     id             : 'greeting',
     description    : 'this is a greeting',
     defaultMessage : 'Hi There!'
+  },
+  label: {
+    id             : 'label',
+    description    : 'this is a greeting input label',
+    defaultMessage : 'Greeting '
   }
 });

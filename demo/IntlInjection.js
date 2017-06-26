@@ -12,7 +12,8 @@ const IntlInjection = (props) => {
       const intlText = {
         buttonText  : intl.formatMessage(messages.buttonText),
         placeholder : intl.formatMessage(messages.placeholder),
-        greeting    : intl.formatMessage(messages.greeting)
+        greeting    : intl.formatMessage(messages.greeting),
+        label       : intl.formatMessage(messages.label)
       }
 
       // add text to config data...

@@ -5,6 +5,6 @@
 solano.yml
 webpack.config.js
 main.js
-
+/src
 /test
 /demo

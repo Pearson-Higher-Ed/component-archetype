@@ -36,6 +36,7 @@ module.exports = {
     https              : false,
     overlay            : true,
     watchContentBase   : true,
+    disableHostCheck   : true,
     historyApiFallback : true,
     watchOptions       : { poll: true },
     contentBase        : path.join(__dirname, "build")

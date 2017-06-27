@@ -12,7 +12,7 @@ expect.extend(expectJSX);
 describe('Component Owner Suite',() => {
 
   beforeEach(function() {
-    const data = {text:{greeting:"hi",buttonText:"button",placeholder:"place"}}
+    const data = {text:{greeting:"Hi there!", buttonText:"say hello", placeholder: "placeholder"}};
     this.wrapper = shallow(<ComponentOwner data={data} />);
   });
 

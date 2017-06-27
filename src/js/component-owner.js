@@ -30,10 +30,11 @@ class ComponentOwner extends Component {
     // FOR DEMO and should be refactored for your purposes:
     //
     return (
-      <div className="hi">
-        <button className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
-        &nbsp;
-        <input type="text" placeholder={data.text.placeholder} value={this.state.text} />
+      <div>
+         <button type="button" className="pe-btn__primary" onClick={this._change}>{data.text.buttonText}</button>
+         <br /><br />
+         <label htmlFor="uniqueID">{data.text.label}</label>
+         <input type="text" id="uniqueID" placeholder={data.text.placeholder} value={this.state.text} />
       </div>
     )
   }

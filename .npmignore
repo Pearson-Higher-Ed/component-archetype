@@ -6,5 +6,6 @@ solano.yml
 webpack.config.js
 main.js
 
+/coverage
 /test
 /demo

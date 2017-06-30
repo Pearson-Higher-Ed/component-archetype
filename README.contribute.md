@@ -10,18 +10,17 @@ The use of Bower for dependencies is not sanctioned in Origami v2. Use npm with 
 | [React Intl](https://github.com/yahoo/react-intl/wiki) | (see demo) API to handle translations, format dates, numbers, and strings. | |
 | [Babel](http://babeljs.io) |  Compiles ES6 to ES5 to enjoy the new version of JavaScript today. Also transpiles JSX via babel-preset-react. | [ES6 REPL](https://babeljs.io/repl/), [ES6 vs ES5](http://es6-features.org), [ES6 Katas](http://es6katas.org), [Pluralsight course](https://www.pluralsight.com/courses/javascript-fundamentals-es6)    |
 | [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes source maps and hot reloading via [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
-| [Jest](https://facebook.github.io/jest/) | Automated tests with [expect](https://www.npmjs.com/package/expect) for assertions and [React Test Utils](https://facebook.github.io/react/docs/test-utils.html) and [Enzyme](http://airbnb.io/enzyme/) for DOM testing without a browser. | [Pluralsight Course](https://www.pluralsight.com/courses/jest-mastering-react-testing) |
-| [ESLint](http://eslint.org/)| Lint JavaScript as configured in .eslintrc. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
+| [Jest](https://facebook.github.io/jest/) | Automated tests with [expect](https://www.npmjs.com/package/expect) for assertions and [Enzyme](http://airbnb.io/enzyme/) for DOM testing without a browser. | [Jest & Enzyme](https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8), [Pluralsight Course](https://www.pluralsight.com/courses/jest-mastering-react-testing) |
+| [ESLint](http://eslint.org/) | Lint JavaScript as configured in .eslintrc. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React-specific linting rules. | |
 | [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) | Compiled CSS styles with variables, mixins, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
-| [Enzyme](http://airbnb.io/enzyme/)|Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse your React component's output.|[Jest & Enzyme](https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8)|
-| [Npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
+| [Npm Scripts](https://docs.npmjs.com/misc/scripts) | Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
 
 This archetype includes a working example component that puts the above to use.
 
 ## Cross-browser Compatibility
 
 Inform the consumers of this component in [README.usage.md](README.usage.md) of any necessary polyfills and how to use
-[Polyfill.io](https://cdn.polyfill.io/v2/docs/examples) to construct requests for specific features.
+[Polyfill.io](https://cdn.polyfill.io/v2/docs/examples) to construct requests for specific browser features.
 
 ## Continuous Integration
 

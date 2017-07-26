@@ -67,13 +67,13 @@ Webpack serves your component in memory when you `npm start`. No physical files 
 built using `npm run build`, physical files are written to /build.
 
 Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically
-reloaded in the browser. Changes to the demo/index.html itself, however, do require a build (npm run build).
+reloaded in the browser. Changes to the demo/index.html itself, however, do require a manual page refresh.
 
 ### Using ElementsSDK
 
-Pearson has created a base styling library to assist developers in creating a user interface with styles that are 
+Pearson has created a base styling library to assist developers in creating a user interface with styles that are
 pre-approved by the design team, known as the ElementsSDK.  This is used for demo purposes here, but it is possible that
-the component archetype demo does not pull in the latest version.  Should it be necessary, please update the package.json 
+the component archetype demo does not pull in the latest version.  Should it be necessary, please update the package.json
 file to reflect the current version of [ElementsSDK](https://github.com/Pearson-Higher-Ed/elements).
 
 ### Unit Test

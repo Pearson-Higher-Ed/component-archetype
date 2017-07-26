@@ -67,7 +67,7 @@ Webpack serves your component in memory when you `npm start`. No physical files 
 built using `npm run build`, physical files are written to /build.
 
 Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically
-reloaded in the browser. Changes to the demo/index.html itself, however, do require a manual page refresh.
+reloaded in the browser. Changes to the demo/index.html itself, however, does require a manual page refresh.
 
 ### Using ElementsSDK
 

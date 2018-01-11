@@ -12,7 +12,7 @@ describe('Component Owner Suite',() => {
   const wrapper = shallow(<ComponentOwner data={data} />);
 
   it('shallowly renders the component', function () {
-    expect(wrapper.node.type).toEqual('div');
+    expect(wrapper.getElement(0).type).toEqual('div');
   });
 
   it('renders the correct text when the button is clicked', function () {

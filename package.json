@@ -12,8 +12,8 @@
   "main": "./build/dist.component-name.js",
   "scripts": {
     "start": "npm run serve",
-    "serve": "webpack-dev-server --hot",
-    "build": "webpack -p",
+    "serve": "NODE_ENV=development webpack-dev-server --hot",
+    "build": "NODE_ENV=production webpack -p",
     "gh-pages": "node ./node_modules/@pearson-components/npm-scripts/npm_scripts/gh-pages.js",
     "test": "jest --no-cache --coverage --config test/testConfig/jest.config.js",
     "gen-changelog": "node ./node_modules/@pearson-components/npm-scripts/npm_scripts/gen-changelog.js",
@@ -60,6 +60,6 @@
   },
   "keywords": [],
   "dependencies": {
-    "jest-cli": "^22.0.6"
+    "@pearson-components/elements-sdk": "^1.8.0"
   }
 }

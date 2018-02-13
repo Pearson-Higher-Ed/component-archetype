@@ -41,7 +41,7 @@ scope in Pearson's npm organization.
 
 ## Initial Machine Setup
 1. Install [Git](https://git-scm.com/downloads).
-2. Install [Node 4.0.0 or greater](https://nodejs.org) - Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
+2. Install [Node.js](https://nodejs.org) - Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
 3. On a Mac? You're all set. If you're on Windows, complete the steps for your OS below.
 
 **On Windows:**

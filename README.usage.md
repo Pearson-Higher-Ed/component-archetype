@@ -1,6 +1,7 @@
 # Usage
 
-This project supports [Node v4+](https://nodejs.org) and npm 2+ installed in your development toolchain.
+This project supports versions of [Node](https://nodejs.org) and the npm client in your development toolchain that are 
+in Active LTS (Long Term Support) by the Node.js Release Working Group.
 
 Install and save in your package.json:
 
@@ -8,15 +9,15 @@ Install and save in your package.json:
 
 ## External Dependencies
 
-React and ReactDOM (v0.14 or v15) are external dependencies required to use this component. They are npm-installable or 
-available from a third-party [CDN](https://cdnjs.com/libraries/react/).
+React and ReactDOM are external dependencies required to use this component. They are npm-installable or available from 
+a third-party [CDN](https://cdnjs.com/libraries/react/).
 
 This component targets the styling in the [Pearson Elements SDK](https://www.npmjs.com/package/pearson-elements).
 
 ## Cross-browser Compatibility
 
-The following [Polyfill.io](https://cdn.polyfill.io/v2/docs/examples) service is recommended for consuming this 
-component cross-browser:
+The [Polyfill.io](https://cdn.polyfill.io/v2/docs/examples) service is recommended for consuming this component with 
+cross-browser support:
 
 ```html
 <script src="https://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent,Intl.~locale.en,Intl.~locale.fr"></script>
@@ -25,14 +26,11 @@ component cross-browser:
 The CustomEvent polyfill is for Internet Explorer, and the Intl.js polyfill is for Safari. As you support more languages,
 add them to the list of features requested.
 
-If your browser already supports a feature, this service automatically optimizes and does not bring down unnecessary code.
+If your browser already supports a feature, this service automatically optimizes and does not download unnecessary code.
 
 ## How to Consume in an Application
 
 See the /demo directory for example usage.
-
-The transpiled, minified bundle will be available in /node_modules/@pearson-components in the component 
-/build directory after you have npm installed this component in your project.
 
 Eventing example:
 

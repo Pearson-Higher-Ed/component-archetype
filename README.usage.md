@@ -1,6 +1,12 @@
-# Usage
+# Summary
 
-This project supports versions of [Node](https://nodejs.org) and the npm client in your development toolchain that are 
+[This is an executive summary of why this component exists and what it does.]
+
+To contribute to the development of this component, see guidance on [contributing](README.contribute.md).
+
+# Installation
+
+This project supports versions of [Node.js](https://nodejs.org) and the npm client in your development toolchain that are 
 in Active LTS (Long Term Support) by the Node.js Release Working Group.
 
 Install and save in your package.json:
@@ -28,33 +34,8 @@ add them to the list of features requested.
 
 If your browser already supports a feature, this service automatically optimizes and does not download unnecessary code.
 
-## How to Consume in an Application
+# How to Consume in an Application
 
 See the /demo directory for example usage.
-
-Eventing example:
-
-```js
-[EVENTING EXAMPLE GOES HERE]
-```
-
-Direct API example:
-
-```js
-[DIRECT API EXAMPLE GOES HERE]
-```
     
-### Component Configuration
-
     [CONFIG INFO GOES HERE]
-
-### Eventing
-
-<table>
-    <tr>
-        <th>Event</th><th>detail</th>
-    </tr
-    <tr>
-        <td></td><td></td>
-    </tr>
-</table>

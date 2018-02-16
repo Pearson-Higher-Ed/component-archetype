@@ -44,5 +44,5 @@ If it is decided the repo belongs in **Pearson Bitbucket**, send a request to th
 
 ## Ready to Develop
 
-After completing the above steps, delete this README and rename [README.main.md](README.main.md) as "README.md" for
+After completing the above steps, delete this README and rename [README.usage.md](README.usage.md) as "README.md" for
 your project. You are ready to begin developing your component!

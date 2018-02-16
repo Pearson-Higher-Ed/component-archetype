@@ -17,11 +17,6 @@ The use of Bower for dependencies is not sanctioned in Origami v2. Use npm with 
 
 This archetype includes a working example component that puts the above to use.
 
-## Cross-browser Compatibility
-
-Inform the consumers of this component in [README.usage.md](README.usage.md) of any necessary polyfills and how to use
-[Polyfill.io](https://cdn.polyfill.io/v2/docs/examples) to construct requests for specific browser features.
-
 ## Continuous Integration
 
 For Origami's SaaS-based continuous integration, PDA must enable a web hook.

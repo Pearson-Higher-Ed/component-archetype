@@ -1,5 +1,7 @@
 # Contributing
 
+To get back to the main README, click [here](README.md).
+
 ## Overview
 
 The use of Bower for dependencies is not sanctioned in Origami v2. Use npm with webpack or browserify instead.

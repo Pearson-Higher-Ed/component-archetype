@@ -12,6 +12,7 @@ import enUSLocaleData from 'react-intl/locale-data/en';
 // Example of consuming the component using React-Intl translation.
 //
 // Demo by adding the query string to the URL: "?lang=fr"
+// window.location.search: Contains the query string portion of the current url.
 //
 // The current philosophy is that all text, from external content to
 // the component's labels and buttons, is passed into the component as
@@ -50,7 +51,7 @@ if (search) {
 
 // Get component's text translations based on user's language.
 ReactDOM.render(
-  <IntlProvider locale={language} key={language} messages={translations[language]}>
+  <IntlProvider locale={language} messages={translations[language]}>
     <IntlInjection />
   </IntlProvider>,
   document.getElementById('translationDemo')

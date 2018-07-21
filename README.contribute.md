@@ -31,6 +31,12 @@ or [HipChat](https://pearson.hipchat.com/chat/room/1469228)
 GitHub repositories will integrate with [Travis CI](https://travis-ci.org/Pearson-Higher-Ed/), which will publish to the
  **public** scope in Pearson's npm organization.
 
+PDA will configure the Travis CI configuration to handle what is described in the official Travis documentation:
+>A repository’s .travis.yml file can have “encrypted values”, such as environment variables, notification settings, and 
+>deploy api keys. These encrypted values can be added by anyone, but are only readable by Travis CI. The repository owner 
+>does not keep any secret key material. Please note that encrypted environment variables are not available for pull requests 
+>from forks.
+
 ### BitBucket
 
 BitBucket repositories will integrate with [Solano CI](https://ci.solanolabs.com), which will publish to the **private**

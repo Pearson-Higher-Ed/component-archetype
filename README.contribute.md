@@ -21,17 +21,14 @@ This archetype includes a working example component that puts the above to use.
 
 ## Continuous Integration
 
-For Origami's SaaS-based continuous integration, PDA must enable a web hook.
-
-Please send your request for one of the following GitHub or BitBucket options to: pearson-design-accelerator@pearson.com
-or [HipChat](https://pearson.hipchat.com/chat/room/1469228)
+For Origami's SaaS-based continuous integration, UXF must enable a web hook.
 
 ### GitHub
 
 GitHub repositories will integrate with [Travis CI](https://travis-ci.org/Pearson-Higher-Ed/), which will publish to the
  **public** scope in Pearson's npm organization.
 
-PDA will set your repo's Travis configuration for publishing to npm as described in the official Travis documentation:
+UXF will set your repo's Travis configuration for publishing to npm as described in the official Travis documentation:
 >A repository’s .travis.yml file can have “encrypted values”, such as environment variables, notification settings, and 
 >deploy api keys. These encrypted values can be added by anyone, but are only readable by Travis CI. The repository owner 
 >does not keep any secret key material. Please note that encrypted environment variables are not available for pull requests 
@@ -39,7 +36,7 @@ PDA will set your repo's Travis configuration for publishing to npm as described
 
 ### BitBucket
 
-BitBucket repositories will integrate with [Solano CI](https://ci.solanolabs.com), which will publish to the **private**
+BitBucket repositories can integrate with [Solano CI](https://ci.solanolabs.com), which will publish to the **private**
 scope in Pearson's npm organization.
 
 ## Initial Machine Setup
@@ -66,18 +63,9 @@ Navigate to: **localhost:8081/component-archetype/**
 #### Where are the files being served from?
 
 Webpack serves your component in memory when you `npm start`. No physical files are written. When the component is
-built using `npm run build`, physical files are written to /build.
-
-Additionally, Hot Module Replacement is activated in the webpack dev server; saved changes to /src are automatically
-reloaded in the browser.  Rendering changes to the demo/index.html itself, however, does require a manual page refresh.
-
-### Using ElementsSDK
-
-Pearson has created a base styling library to assist developers in creating a user interface with styles that are
-pre-approved by the design team, known as the ElementsSDK.  This is used for demo purposes here, but it is possible that
-the component archetype demo does not pull in the latest version.  Should it be necessary, please update the package.json
-file to reflect the current version of [ElementsSDK](https://github.com/Pearson-Higher-Ed/elements).
-
+built using `npm run build`, physical files are written to /build. Additionally, Hot Module Replacement is activated in 
+the webpack dev server; saved changes to /src are automatically reloaded in the browser.  Rendering changes to the 
+demo/index.html itself, however, does require a manual page refresh.
 
 ### Unit Test
 
@@ -119,6 +107,7 @@ Determine if your component passes a series of checks for Origami v2 compliance.
     npm run verify
 
 ### GitHub Pages
+
 The component demo can be deployed to GitHub Pages by:
 
     npm run gh-pages
@@ -131,8 +120,8 @@ The page can then be viewed at:
 
 It is recommended to use the [React Intl](https://github.com/yahoo/react-intl/wiki) library for internationalization.
 
-It is expected that applications will pass in translated text for dynamic and static content, and your component simply
-needs to render whatever is passed in.
+It is expected that applications will pass in translated text for dynamic and static content, and your component simply 
+renders whatever is passed in.
 
 ### Publish to Pearson npm Registry
 

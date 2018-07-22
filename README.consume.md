@@ -18,7 +18,8 @@ Install and save in your package.json:
 React and ReactDOM are external dependencies required to use this component. They are npm-installable or available from 
 a third-party [CDN](https://cdnjs.com/libraries/react/).
 
-This component targets the styling in the [Pearson Elements SDK](https://www.npmjs.com/package/pearson-elements).
+Pearson has created a library to assist developers in creating a user interface with styles and atomic components that are
+pre-approved by the design team, known as the [Pearson Elements SDK](https://www.npmjs.com/package/pearson-elements).
 
 ## Cross-browser Compatibility
 
